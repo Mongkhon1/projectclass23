@@ -1,0 +1,10 @@
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  ion-button {
+    border-radius: 50px;
+  }
+}

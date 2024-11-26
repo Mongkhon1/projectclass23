@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="purple">
+    <ion-title color="light" style="text-align: center;">แสดงรายการทั้งหมด</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="loadDataMem()">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item *ngFor="let mb of member">
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg"/>
+    </ion-avatar> &nbsp; &nbsp;
+    <ion-label>{{ mb.id_stu }}{{ mb.name }}{{ mb.nname }}</ion-label>
+    <ion-button color="warning" (click)="edit(mb)">แก้ไข</ion-button>&nbsp;&nbsp;
+    <ion-button color="danger" (click)="delMem(mb.id)">ลบข้อมูล</ion-button>
+  </ion-item>
+
+  <div class="center-button">
+    <ion-button (click)="goHome()" >กลับไปหน้าแรก</ion-button>
+  </div>
+</ion-content>

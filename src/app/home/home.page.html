@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="purple">
+    <ion-title color="light" style="text-align: center;">
+      ข้อมูลเรียน ปวช.2/3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-label class="ion-padding" style="text-align: center;">
+    <h1><b>กรอกข้อมมูลนักเรียน ปวช.2/3</b></h1>
+  </ion-label>
+
+  <ion-item class="menu">
+    <ion-input placeholder="กรอกข้อมูล" type="text" [(ngModel)]="txtidstu">รหัสนักเรียน</ion-input>
+  </ion-item>
+  <ion-item class="menu">
+    <ion-input placeholder="กรอกข้อมูล" type="text" [(ngModel)]="txtname">ชื่อ-นามสกุล</ion-input>
+  </ion-item>
+  <ion-item class="menu">
+    <ion-input placeholder="กรอกข้อมูล" type="text" [(ngModel)]="txtnname">กรอกชื่อเล่น</ion-input>
+  </ion-item>
+  <ion-item class="menu">
+    <ion-input placeholder="กรอกข้อมูล" type="text" [(ngModel)]="txtage">กรอกอายุ</ion-input>
+  </ion-item>
+  <ion-item class="menu">
+    <ion-input placeholder="กรอกข้อมูล" type="text" [(ngModel)]="txtphone">กรอกเบอร์โทรศัพท์</ion-input>
+  </ion-item>
+  <ion-item class="menu">
+    <ion-input placeholder="กรอกข้อมูล" type="text" [(ngModel)]="txtaddress">กรอกที่อยู่</ion-input>
+  </ion-item>
+
+  <ion-list class="menu">
+    <ion-label class="ion-padding">สถานะภาพ</ion-label>
+    <ion-item>
+      <ion-select aria-label="fruit" interface="popover" placeholder="สถานะภาพ" [(ngModel)]="txtstatus">
+        <ion-select-option value="โสด">โสด</ion-select-option>
+        <ion-select-option value="สมรสแล้ว">สมรสแล้ว</ion-select-option>
+        <ion-select-option value="อย่าร้าง">หย่าร้าง</ion-select-option>
+        <ion-select-option value="มีแฟนแล้ว">มีแฟนแล้ว</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  <div class="button-1">
+    <ion-button (click)="addmember()">บันทึกข้อมูล</ion-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <ion-button slot="end" (click)="showdata()" color="warning">ดูข้อมูล</ion-button>
+  </div>
+</ion-content>

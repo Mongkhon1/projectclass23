@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.text-canter {
+  text-align: center; 
+}
+
+.header {
+  margin-top: 50px;
+}
+
+.ion-padding {
+  padding-left: 16px;
+}
+
+.menu {
+  padding-top: 5px;
+}
+
+.menu-header {
+  padding-top: 20px;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  ion-button {
+    max-width: 140px;
+  }
+}
